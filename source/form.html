@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class ="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Форма</title>
+  </head>
+  <body class="page__body">
+
+    <div class="container">
+
+      <header class="header">
+        <div class="logo">
+          <img class="logo__img" src="#" width="1" height="1" alt="">
+        </div>
+        <nav class="menu">
+          <ul class="menu__header">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Каталог продукции</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="container-main shape">
+
+        <section class="shape__form">
+          <div class="shape__wrapper">
+            <h1 class="shape__title">Подбор программы</h1>
+            <p class="shape__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          </div>
+        </section>
+
+        <section class="form">
+          <h2 class="visually-hidden">Таблица с формой</h2>
+          <form action="https://echo.htmlacademy.ru" class="form__block" method="get">
+            <div class="form__wrapper">
+              <div class="form__set">
+                <h3 class="visually-hidden">Личные данные кота</h3>
+                <div class="form__block">
+                  <label for="nickname" class="form__label">Имя:*</label>
+                  <input type="text" class="form__input" id="nickname" name="nickname" placeholder="Барсик">
+                </div>
+                <div class="form__block">
+                  <label for="weight" class="form__label">Вес (кг):*</label>
+                  <input type="text" class="form__input" id="weight" name="weight" placeholder="7">
+                </div>
+                <div class="form__block">
+                  <label for="age" class="form__label">Возраст (лет):</label>
+                  <input type="text" class="form__input" id="age" name="age" placeholder="7">
+                </div>
+              </div>
+
+              <div class="form__set">
+                <h3 class="visually-hidden">Выбор программы питания</h3>
+                <ul class="form__list">
+                  <li class="form__item">
+                    <label for="slim" class="form__name">похудение</label>
+                    <input type="radio" class="form__radio" name="radio-item" id="slim" value="slim" checked>
+                  </li>
+                  <li class="form__item">
+                    <label for="mass" class="form__name">Набор массы</label>
+                    <input type="radio" class="form__radio" name="radio-item" id="mass" value="mass">
+                  </li>
+                  <li class="form__item">
+                    <label for="consultation" class="form__name">Не знаю (Нужен ваш совет)</label>
+                    <input type="radio" class="form__radio" name="radio-item" id="consultation" value="consultation">
+                  </li>
+                </ul>
+              </div>
+
+              <div class="form__set">
+                <h3 class="form__title">Контактные данные (владельца кота)</h3>
+                <div class="form__email">
+                  <label for="email" class="form__label">E-mail:*</label>
+                  <input type="email" class="form__input" id="email" name="email" placeholder="kuklachev@gmail.com">
+                  <svg><!--письмо--></svg>
+                </div>
+                <div class="form__phone">
+                  <label for="phone" class="form__label">E-mail:*</label>
+                  <input type="tel" class="form__input" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+                  <svg><!--трубка--></svg>
+                </div>
+              </div>
+
+              <div class="form__set">
+                <h3 class="form__title">Комментарий</h3>
+                <textarea class="form__textarea" name="tell" placeholder="Расскажите обо всех повАдках кота"></textarea>
+              </div>
+
+              <div class="form__set">
+                <h3 class="form__additional">Дополнительно</h3>
+                <ul class="form__products products">
+                  <li class="products__item">
+                    <label for="sweetener" class="products__label">Сахарозаменитель</label>
+                    <input type="checkbox" class="products__input" name="sweetener" id="sweetener" checked>
+                  </li>
+                  <li class="products__item">
+                    <label for="water" class="products__label">Питьевая вода</label>
+                    <input type="checkbox" class="products__input" name="water" id="water">
+                  </li>
+                  <li class="products__item">
+                    <label for="milk" class="products__label">Молоко</label>
+                    <input type="checkbox" class="products__input" name="milk" id="milk">
+                  </li>
+                  <li class="products__item">
+                    <label for="vitamins" class="products__label">Витамины</label>
+                    <input type="checkbox" class="products__input" name="vitamins" id="vitamins">
+                  </li>
+                </ul>
+              </div>
+
+              <div class="form__set">
+                <button class="form__button button" type="submit">отправить заявку</button>
+                <span class="form__field">* — Обязательные поля</span>
+              </div>
+            </div>
+          </form>
+        </section>
+
+      </main>
+
+      <section class="map">
+        <h2 class="visually-hidden">Адрес</h2>
+        <div class="map__invitation">
+          <div class="map__text">
+            <b>приглашаем к сотрудничеству дилеров!</b>
+          </div>
+          <div class="map__address">
+            <p>ул. Большая<p>
+            <p>Конюшенная, д. 19/8</p>
+            <p>Санкт-Петербург</p>
+          </div>
+        </div>
+        <div class="map__image">
+          <img class="map-img" src="#" alt="">
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__logo"></div>
+        <div class="footer__social-network">
+          <svg><!--иконки--></svg>
+          <svg><!--иконки--></svg>
+          <svg><!--иконки--></svg>
+        </div>
+        <div class="developer"></div>
+      </footer>
+    </div>
+  </body>
+</html>
