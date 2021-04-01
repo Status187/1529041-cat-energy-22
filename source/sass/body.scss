@@ -1,0 +1,41 @@
+.page__body {
+  position: relative;
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $mercury;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container-main {
+  position: absolute;
+  top: 269px;
+}
+
+.page__body a {
+  @include text-decoration-none();
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+}
