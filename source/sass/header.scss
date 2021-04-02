@@ -4,12 +4,12 @@
   height: 72px;
 }
 
-.logo {
+.header__logo {
   @include padding(12px, 23px, 16px, 20px);
   border-bottom: 1px solid $border;
 }
 
-.menu__header {
+.menu__list {
   @include margin-zero();
   @include padding-zero();
   display: flex;
