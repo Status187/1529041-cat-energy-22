@@ -1,0 +1,13 @@
+.map {
+  @include margin(0, 20px, 0, 20px);
+}
+
+.map__text b {
+  @include font-options(normal, normal, 16px, 18px, center, uppercase);
+}
+
+.map__address p {
+  @include margin-zero();
+  @include font-options(normal, normal, 14px, 20px, left, none);
+  font-family: "arial";
+}

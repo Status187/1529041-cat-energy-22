@@ -1,55 +1,19 @@
-@mixin font-options($weight, $style, $size, $height, $align, $trans) {
-  font-family: "oswald", "arial", sans-serif;
-  font-weight: $weight;
-  font-style: $style;
-  font-size: $size;
-  line-height: $height;
-  text-align: $align;
-  text-transform: $trans;
-}
-
-//Padding mixin
-//@include padding(0px, 0px, 0px, 0px);
-@mixin padding($top, $right, $bottom, $left) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
-}
-
-//Margin mixin
-//@include margin(0px, 0px, 0px, 0px);
-@mixin margin($top, $right, $bottom, $left) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
-}
-
-//@include margin-zero()
-@mixin margin-zero() {
-  margin: 0;
-}
-
-//@include padding-zero()
-@mixin padding-zero() {
-  padding: 0;
-}
-
-//@include style-none()
-@mixin style-none() {
-  list-style: none;
-}
-
-//@include text-decoration-none()
-@mixin text-decoration-none() {
-  text-decoration: none;
-}
-
-@mixin button() {
-  display: block;
-  width: 100%;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-}
+$white: #ffffff;
+$basic-grey: #f2f2f2;
+$pale-grey: #ebebeb;
+$light-grey: #cdcdcd;
+$light-grey-darken: #c4c4c4;
+$light-grey-line: #d9d9d9;
+$mercury: #e5e5e5;
+$border: #e6e6e6;
+$dark-grey-lighter: #666666;
+$dark-grey: #444444;
+$black: #000000;
+$dark: #222222;
+$status-error: #ff8282;
+$basic-green:#68b738;
+$basic-green-darken:#5eaa2f;
+/*Тени*/
+$shadow-normal: rgba(0, 0, 0, 0.16);
+$shadow-hover: rgba(0, 0, 0, 0.19);
+$shadow-pressed: rgba(0, 0, 0, 0.2);

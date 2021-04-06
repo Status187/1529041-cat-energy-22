@@ -1,6 +1,6 @@
 
 .welcome {
-  margin-top: 200px; /*ВРЕМЕННОЕ РЕШЕНИЕ!!! ИНАЧЕ СЕКЦИИ СЛИПАЮТСЯ*/
+  margin-top: 197px; /*ВРЕМЕННОЕ РЕШЕНИЕ!!! ИНАЧЕ СЕКЦИИ СЛИПАЮТСЯ*/
   display: block;
   background-image: url(/img/index/index-background.png);
   background-repeat: no-repeat;
@@ -29,11 +29,3 @@
   @include margin(0px, 0px, 0px, 0px);
 }
 
-.button {
-  @include button();
-  @include font-options(400, normal, 14px, 18px, center, uppercase);
-  @include style-none();
-  @include padding(11px, 0, 11px, 0);
-  color: $white;
-  background-color: $basic-green;
-}

@@ -1,0 +1,33 @@
+.live-example {
+  @include margin(0, 20px, 0, 20px);
+}
+
+
+.live-example__title {
+  @include font-options(normal, normal, 36px, 40px, center, none);
+  @include margin(27px, 0, 33px, 0);
+}
+
+.live-example__text {
+  @include font-options(normal, normal, 14px, 18px, left, none);
+  font-family: "arial";
+}
+
+.live-example__value {
+  @include font-options(normal, normal, 24px, 24px, center, uppercase);
+}
+
+.live-exemple__text {
+  @include font-options(normal, normal, 12px, 12px, center, none);
+  font-family: "arial";
+}
+
+.live-example__nutrition {
+  @include font-options(normal, normal, 14px, 20px, center, uppercase);
+}
+
+.live-example__button {
+  @include font-options(normal, normal, 16px, 20px, center, uppercase);
+  border: none;
+  background-color: $white;
+}

@@ -1,8 +1,12 @@
 
-@import "font-face.scss";
-@import "variables.scss";
-@import "colors.scss";
-@import "shared.scss";
-@import "header.scss";
-@import "welcome.scss";
-@import "choice.scss";
+@import "./fonts.scss";
+@import "./mixin.scss";
+@import "./variables.scss";
+@import "./class.scss";
+@import "./blocks/page.scss";
+@import "./blocks/header.scss";
+@import "./blocks/welcome.scss";
+@import "./blocks/choice.scss";
+@import "./blocks/works.scss";
+@import "./blocks/live-example.scss";
+@import "./blocks/map.scss"
