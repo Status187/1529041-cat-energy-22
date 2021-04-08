@@ -9,5 +9,5 @@
 .map__address p {
   @include margin-zero();
   @include font-options(normal, normal, 14px, 20px, left, none);
-  font-family: "arial";
+  font-family: "arial", sans-serif;
 }

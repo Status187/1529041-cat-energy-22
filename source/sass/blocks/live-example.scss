@@ -1,7 +1,7 @@
 .live-example {
   @include margin(0, 20px, 0, 20px);
+  background-color: $pale-grey;
 }
-
 
 .live-example__title {
   @include font-options(normal, normal, 36px, 40px, center, none);
@@ -10,7 +10,7 @@
 
 .live-example__text {
   @include font-options(normal, normal, 14px, 18px, left, none);
-  font-family: "arial";
+  font-family: "arial", sans-serif;
 }
 
 .live-example__value {
@@ -19,7 +19,7 @@
 
 .live-exemple__text {
   @include font-options(normal, normal, 12px, 12px, center, none);
-  font-family: "arial";
+  font-family: "arial", sans-serif;
 }
 
 .live-example__nutrition {
@@ -29,5 +29,5 @@
 .live-example__button {
   @include font-options(normal, normal, 16px, 20px, center, uppercase);
   border: none;
-  background-color: $white;
+  background-color: $pale-grey;
 }
