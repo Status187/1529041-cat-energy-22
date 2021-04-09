@@ -1,8 +1,8 @@
 //@include font-options($weight, $style, $size, $height, $align, $trans)
-@mixin font-options($weight, $style, $size, $height, $align, $trans) {
+@mixin font-options($size, $height, $align, $trans) {
   font-family: "oswald", "arial", sans-serif;
-  font-weight: $weight;
-  font-style: $style;
+  font-weight: normal;
+  font-style: normal;
   font-size: $size;
   line-height: $height;
   text-align: $align;

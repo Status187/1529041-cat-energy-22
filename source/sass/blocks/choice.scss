@@ -5,11 +5,11 @@
 }
 
 .choice__title {
-  @include font-options(normal, normal, 24px, 37px, center, uppercase);
+  @include font-options(24px, 37px, center, uppercase);
 }
 
 .choice__text {
-  @include font-options(normal, normal, 14px, 18px, left, none);
+  @include font-options(14px, 18px, left, none);
   @include padding(0, 0, 23px, 0);
   font-family: "arial", sans-serif;
   border-bottom: 1px solid $light-grey-line;
@@ -23,6 +23,6 @@
 }
 
 .choice__transition {
-  @include font-options(normal, normal, 16px, 16px, left, uppercase);
+  @include font-options(16px, 16px, left, uppercase);
   color: $black;
 }

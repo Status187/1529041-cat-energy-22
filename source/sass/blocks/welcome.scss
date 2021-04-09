@@ -1,6 +1,5 @@
 
 .welcome {
-  /*margin-top: 197px; ВРЕМЕННОЕ РЕШЕНИЕ!!! ИНАЧЕ СЕКЦИИ СЛИПАЮТСЯ*/
   display: block;
   background-image: url("/img/index/index-background.png");
   background-repeat: no-repeat;
@@ -10,14 +9,14 @@
 }
 
 .welcome__title {
-  @include font-options(400, normal, 36px, 36px, center, none);
+  @include font-options(36px, 36px, center, none);
   @include margin-zero();
   @include margin(0, 0, 25px, 0);
   color: $white;
 }
 
 .welcome__slogan {
-  @include font-options(400, normal, 14px, 14px, center, uppercase);
+  @include font-options(14px, 14px, center, uppercase);
   @include margin-zero();
   @include margin(0, 0, 29px, 0);
   color: $white;
