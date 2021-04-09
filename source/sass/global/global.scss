@@ -1,0 +1,12 @@
+.button {
+  @include button();
+  @include font-options(14px, 18px, center, uppercase);
+  @include style-none();
+  padding: 11px;
+  color: $white;
+  background-color: $basic-green;
+}
+
+.container {
+  background-color: $white;
+}

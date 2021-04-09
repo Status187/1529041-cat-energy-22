@@ -1,31 +1,19 @@
-.page__body {
-  width: 320px;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: $mercury;
+
+@media (min-width: 320px) {
+  .page__body {
+    width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $mercury;
+  }
 }
 
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-   box-sizing: border-box;
-}
-
-.container {
-  top: 269px;
-  display: flex;
-  flex-direction: column;
-  background-color: $white;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .page__body a {
   @include text-decoration-none();
-}
-
-.button {
-  @include button();
-  @include font-options(400, normal, 14px, 18px, center, uppercase);
-  @include style-none();
-  @include padding(11px, 0, 11px, 0);
-  color: $white;
-  background-color: $basic-green;
 }

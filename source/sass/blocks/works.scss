@@ -3,11 +3,15 @@
 }
 
 .works__title {
-  @include font-options(normal, normal, 36px, 40px, center, none);
+  @include font-options(36px, 40px, center, none);
   @include margin(27px, 0, 38px, 0);
 }
 
 .works__paragraph {
-  @include font-options(normal, normal, 14px, 18px, left, none);
-  font-family: "arial";
+  @include font-options(14px, 18px, left, none);
+  font-family: "arial", sans-serif;
+}
+
+.works__item {
+  @include style-none();
 }

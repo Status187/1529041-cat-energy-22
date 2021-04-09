@@ -3,11 +3,11 @@
 }
 
 .map__text b {
-  @include font-options(normal, normal, 16px, 18px, center, uppercase);
+  @include font-options(16px, 18px, center, uppercase);
 }
 
 .map__address p {
   @include margin-zero();
-  @include font-options(normal, normal, 14px, 20px, left, none);
-  font-family: "arial";
+  @include font-options(14px, 20px, left, none);
+  font-family: "arial", sans-serif;
 }

@@ -1,24 +1,22 @@
 
 .welcome {
-  /*margin-top: 197px; ВРЕМЕННОЕ РЕШЕНИЕ!!! ИНАЧЕ СЕКЦИИ СЛИПАЮТСЯ*/
   display: block;
-  background-image: url(/img/index/index-background.png);
+  background-image: url("/img/index/index-background.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: 320px;
   object-fit: contain;
-  height: 302px;
 }
 
 .welcome__title {
-  @include font-options(400, normal, 36px, 36px, center, none);
+  @include font-options(36px, 36px, center, none);
   @include margin-zero();
   @include margin(0, 0, 25px, 0);
   color: $white;
 }
 
 .welcome__slogan {
-  @include font-options(400, normal, 14px, 14px, center, uppercase);
+  @include font-options(14px, 14px, center, uppercase);
   @include margin-zero();
   @include margin(0, 0, 29px, 0);
   color: $white;
@@ -26,6 +24,5 @@
 
 .welcome__container {
   @include padding(27px, 20px, 0, 20px);
-  @include margin(0px, 0px, 0px, 0px);
+  @include margin(0, 0, 0, 0);
 }
-

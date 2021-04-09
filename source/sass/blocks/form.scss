@@ -1,0 +1,67 @@
+.form {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "oswald", "arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.shape__title {
+  @include font-options(36px, 36px, center, none);
+  @include padding(27px, 0, 37px, 0);
+  margin: 0;
+}
+
+.form__title {
+  @include font-options(26px, 26px, left, none);
+  padding: 0 20px;
+  margin: 0;
+}
+
+.form__field--area {
+  padding: 0 20px;
+}
+
+.shape__description {
+  @include font-options(14px, 18px, center, uppercase);
+  margin: 0;
+  margin-bottom: 39px;
+}
+
+.form__block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+  padding: 0 20px;
+}
+
+.form__label {
+  white-space: nowrap;
+  margin-right: 13px;
+}
+
+.form__input {
+  height: 46px;
+  width: 100%;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid $pale-grey-line;
+}
+
+.form li {
+  @include style-none();
+}
+
+.form__textarea {
+  height: 150px;
+  width: 100%;
+}
+
+.form__field--border {
+  border-bottom: 1px solid $light-grey-line;
+  border-top: 1px solid $light-grey-line;
+  width: 100%;
+}
+//РАДИО КНОПКИ
+
+//E MAIL
