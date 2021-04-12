@@ -1,3 +1,23 @@
+
 .aside {
-  padding: 0 10px;
+  padding: 0 20px;
+  margin-bottom: 35px;
+}
+
+.aside__wrapper {
+  background-image: url("../../img/catalog/background-green-cat.png");
+  min-height: 289px;
+  background-color: $basic-green;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  object-fit: contain;
+}
+
+.aside p {
+  @include font-options(16px, 20px, center, none);
+  @include padding(0, 61px, 0, 58px);
+  @include margin-zero();
+  font-family: "arial", sans-serif;
+  color: $white;
 }

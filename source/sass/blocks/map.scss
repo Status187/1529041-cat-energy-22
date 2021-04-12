@@ -1,5 +1,19 @@
 .map {
-  @include margin(0, 20px, 0, 20px);
+  background-color: $basic-grey;
+}
+
+.map__invitation {
+  padding: 28px 19px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.map__text {
+  width: 50%;
+}
+
+.map__address {
+  width: 50%;
 }
 
 .map__text b {

@@ -1,6 +1,9 @@
 .live-example {
-  @include margin(0, 20px, 0, 20px);
   background-color: $pale-grey;
+}
+
+.live-example__wrapper {
+  padding: 0 20px;
 }
 
 .live-example__title {
