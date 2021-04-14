@@ -26,3 +26,8 @@
   @include padding(27px, 20px, 0, 20px);
   @include margin(0, 0, 0, 0);
 }
+
+.welcome__link {
+  @include font-options(14px, 18px, center, uppercase);
+  @include button();
+}

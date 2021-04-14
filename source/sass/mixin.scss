@@ -1,4 +1,4 @@
-//@include font-options($weight, $style, $size, $height, $align, $trans)
+//@include font-options($size, $height, $align, $trans);
 @mixin font-options($size, $height, $align, $trans) {
   font-family: "oswald", "arial", sans-serif;
   font-weight: normal;
@@ -27,30 +27,39 @@
   margin-left: $left;
 }
 
-//@include margin-zero()
+//@include margin-zero();
 @mixin margin-zero() {
   margin: 0;
 }
 
-//@include padding-zero()
+//@include padding-zero();
 @mixin padding-zero() {
   padding: 0;
 }
 
-//@include style-none()
+//@include style-none();
 @mixin style-none() {
   list-style: none;
 }
 
-//@include text-decoration-none()
+//@include text-decoration-none();
 @mixin text-decoration-none() {
   text-decoration: none;
 }
 
+//@include button();
 @mixin button() {
+  @include style-none();
   display: block;
   width: 100%;
+  padding: 11px 0;
   border: 0;
   outline: 0;
   cursor: pointer;
+  color: $white;
+  background-color: $basic-green;
+}
+
+@mixin background() {
+  background-color: $white;
 }

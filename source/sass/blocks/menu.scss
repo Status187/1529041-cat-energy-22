@@ -1,0 +1,22 @@
+.menu__list {
+  @include margin-zero();
+  @include padding-zero();
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__item {
+  @include padding(22px, 0, 24px, 0);
+  @include font-options(20px, 20px, center, uppercase);
+  @include style-none();
+  font-weight: 500;
+  background-color: $white;
+  width: 320px;
+  height: 66px;
+  border-bottom: 1px solid $border;
+}
+
+.menu__link {
+  @include text-decoration-none();
+  color: $black;
+}

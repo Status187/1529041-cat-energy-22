@@ -21,12 +21,6 @@
   padding: 0 20px;
 }
 
-.shape__description {
-  @include font-options(14px, 18px, center, uppercase);
-  margin: 0;
-  margin-bottom: 39px;
-}
-
 .form__block {
   display: flex;
   align-items: center;
@@ -62,6 +56,12 @@
   border-top: 1px solid $light-grey-line;
   width: 100%;
 }
-//РАДИО КНОПКИ
 
-//E MAIL
+.form__controls {
+  padding: 0 20px;
+}
+
+.form__button {
+  @include button();
+  @include font-options(16px, 20px, center, uppercase);
+}

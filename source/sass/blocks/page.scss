@@ -4,7 +4,9 @@
     width: 320px;
     margin-right: auto;
     margin-left: auto;
-    background-color: $mercury;
+    background-color: $white;
+    outline: 2px solid rgba(0, 255, 221, 0.8);
+    outline-offset: -2px;
   }
 }
 

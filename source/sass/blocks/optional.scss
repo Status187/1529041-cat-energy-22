@@ -1,0 +1,36 @@
+.optional {
+  padding: 0 20px;
+  margin-bottom: 39px;
+}
+
+.optional__title {
+  @include font-options(24px, 24px, left, none);
+  @include padding(25px, 0, 36px, 0);
+  @include margin-zero();
+  border-bottom: 1px solid $light-grey;
+}
+
+.optional__block {
+  padding-bottom: 19px;
+  border-bottom: 1px solid $light-grey;
+}
+
+.optional__header {
+  @include font-options(16px, 16px, left, uppercase);
+}
+
+.optional__list {
+  @include font-options(14px, 14px, left, none);
+  @include style-none();
+  @include padding-zero();
+  @include margin-zero();
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "arial", sans-serif;
+}
+
+.optional__button {
+  @include font-options(16px, 20px, center, uppercase);
+  @include button();
+}
