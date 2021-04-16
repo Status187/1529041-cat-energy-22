@@ -11,12 +11,32 @@
   @include style-none();
   font-weight: 500;
   background-color: $white;
-  width: 320px;
-  height: 66px;
   border-bottom: 1px solid $border;
 }
 
 .menu__link {
   @include text-decoration-none();
   color: $black;
+}
+
+@media (min-width: $tablet-width) {
+  .menu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu__item {
+    @include font-options(18px, 24px, center, uppercase);
+    border-bottom: none;
+    margin-right: 4px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu__item {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 37px;
+  }
 }

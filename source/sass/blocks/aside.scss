@@ -18,6 +18,6 @@
   @include font-options(16px, 20px, center, none);
   @include padding(0, 61px, 0, 58px);
   @include margin-zero();
-  font-family: "arial", sans-serif;
+  font-family: $font-stack;
   color: $white;
 }

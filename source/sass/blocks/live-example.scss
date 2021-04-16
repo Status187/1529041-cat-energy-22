@@ -11,18 +11,28 @@
   @include margin(27px, 0, 33px, 0);
 }
 
+.live-example__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 .live-example__text {
   @include font-options(14px, 18px, left, none);
-  font-family: "arial", sans-serif;
+  font-family: $font-stack;
 }
 
 .live-example__value {
   @include font-options(24px, 24px, center, uppercase);
+  display: block;
+  border: 1px solid $light-grey;
+  border-radius: 3px;
+  padding: 14px 0;
+  width: 124px;
 }
 
-.live-exemple__text {
+.live-exemple__bottom {
   @include font-options(12px, 12px, center, none);
-  font-family: "arial", sans-serif;
+  font-family: $font-stack;
 }
 
 .live-example__nutrition {
@@ -33,4 +43,61 @@
   @include font-options(16px, 20px, center, uppercase);
   border: none;
   background-color: $pale-grey;
+}
+
+@media (min-width: $tablet-width) {
+  .live-example__wrapper {
+    border-top: 1px solid $border;
+    padding: 0 30px;
+    background-color: $white;
+  }
+
+  .live-example__title {// одинаковые свойства текста как у work__title
+    @include margin(43px, 0, 63px, 0);
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .live-example__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .live-example__flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .live-example__flex {
+    width: 366px;
+  }
+
+  .live-example__value {
+    width: 162px;
+    padding: 16px 0;
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .live-example__nutrition {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .live-example__progress {
+    margin: 0 30px;
+  }
+
+  .live-example__button {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .live-example__wrapper {
+    border-top: none;
+    padding: 0 110px;
+  }
 }

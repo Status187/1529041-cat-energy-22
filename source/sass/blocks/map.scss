@@ -23,5 +23,28 @@
 .map__address p {
   @include margin-zero();
   @include font-options(14px, 20px, left, none);
-  font-family: "arial", sans-serif;
+  font-family: $font-stack;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    background-color: inherit;
+  }
+
+  .map__invitation {
+    margin: 0 71px;
+  }
+
+  .map__text {
+    margin-right: 310px;
+  }
+
+  .map__address p {
+    text-align: right;
+  }
+
+  .map__img {
+    min-height: 400px;
+    width: 100%;
+  }
 }
