@@ -9,9 +9,50 @@
 
 .works__paragraph {
   @include font-options(14px, 18px, left, none);
-  font-family: "arial", sans-serif;
+  font-family: $font-stack;
 }
 
 .works__item {
   @include style-none();
+}
+
+@media (min-width: $tablet-width) {
+  .works {
+    margin: 0 30px;
+  }
+
+  .works__title {
+    @include margin(45px, 0, 32px, 0);
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .works__paragraph {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .works__list {
+    @include padding-zero();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 37px;
+    column-gap: 152px;
+    margin-right: 79px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .works {
+    margin: 0 110px;
+  }
+
+  .works__list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    margin: 0;
+  }
 }
