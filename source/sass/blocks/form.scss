@@ -9,21 +9,110 @@
   @media (min-width: $tablet-width) {
     padding: 0 70px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.form__field {
+  min-height: 157px;
+  padding: 0 20px;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    @include padding-zero();
+    @include margin(0, 0, 72px, 0);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 47%;
+  }
+}
+
+.form__field--border {
+  border-bottom: 1px solid $light-grey-line;
+  border-top: 1px solid $light-grey-line;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $light-grey-line;
+  }
+}
+
+.form__flex {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    width: 100%;
+    column-gap: 90px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .form__block {
+    min-width: 47%;
+  }
+}
+
+.form__field--flex {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.form__field--area {
+  //padding: 0 20px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .form__title {
   @include font-options(26px, 26px, left, none);
   margin: 0;
   margin-bottom: 35px;
+  background-color: $white;
+  position: relative;
+}
+
+.form__title--subtitle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100vw;// вылезает за пределы, так и не додумал в чем дело((
+    height: 3px;
+    margin: 15px;
+    background-color: $basic-green;
+    z-index: -1;
+  }
 
   @media (min-width: $tablet-width) {
     @include title-medium();
-    margin-bottom: 2em;
-  }
-}
 
-.form__field--area {
-  padding: 0 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 100%;
+      width: 100vw;
+      height: 3px;
+      margin-top: 17px;
+      background-color: $basic-green;
+    }
+  }
 }
 
 .form__block {
@@ -87,17 +176,6 @@
   }
 }
 
-.form__field {
-  min-height: 157px;
-  padding: 0 20px;
-  margin-bottom: 26px;
-
-  @media (min-width: $tablet-width) {
-    @include padding-zero();
-    @include margin(0, 0, 72px, 0);
-  }
-}
-
 .form__item {
   margin: 20px 0;
 }
@@ -108,18 +186,16 @@
   }
 }
 
-.form__field--border {
-  border-bottom: 1px solid $light-grey-line;
-  border-top: 1px solid $light-grey-line;
-  width: 100%;
-
-  @media (min-width: $tablet-width) {
-    border: 1px solid $light-grey-line;
-  }
-}
-
 .form__controls {
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .form__button {
@@ -129,19 +205,27 @@
   @media (min-width: $tablet-width) {
     @include paragraph-style();
   }
+
+  @media (min-width: $desktop-width) {
+    width: 568px;
+    margin-right: 81px;
+  }
 }
 
 .form__remind {
+  @include margin(21px, 0, 32px, 0);
+  display: block;
   font-family: "arial", sans-serif;
   font-style: normal;
   font-weight: normal;
+  text-align: center;
   font-size: 14px;
   line-height: 16px;
   text-transform: none;
-  padding-left: 20%;// не выстраивается по центру :( text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     padding: 20px;
+    margin: 0;
   }
 }
