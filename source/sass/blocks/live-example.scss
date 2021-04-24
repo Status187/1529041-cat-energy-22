@@ -1,24 +1,65 @@
 .live-example {
   background-color: $pale-grey;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    background-color: $basic-grey;
+  }
 }
 
 .live-example__wrapper {
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $border;
+    padding: 0 30px;
+    background-color: $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top: none;
+    padding: 0 110px;
+    background-color: $basic-grey;
+  }
 }
 
 .live-example__title {
   @include font-options(36px, 40px, center, none);
   @include margin(27px, 0, 33px, 0);
+
+  @media (min-width: $tablet-width) {
+    @include margin(43px, 0, 63px, 0);
+    @include title-large();
+  }
 }
 
 .live-example__flex {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 366px;
+  }
+}
+
+.live-example__flex-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .live-example__text {
   @include font-options(14px, 18px, left, none);
   font-family: $font-stack;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .live-example__value {
@@ -28,6 +69,13 @@
   border-radius: 3px;
   padding: 14px 0;
   width: 124px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    padding: 16px 0;
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .live-exemple__bottom {
@@ -37,14 +85,39 @@
 
 .live-example__nutrition {
   @include font-options(14px, 20px, center, uppercase);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.live-example__price {
+  @include font-options(14px, 20px, center, uppercase);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .live-example__button {
   @include font-options(16px, 20px, center, uppercase);
   border: none;
-  background-color: $pale-grey;
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    @include paragraph-style();
+  }
 }
 
+.live-example__progress {
+  @media (min-width: $tablet-width) {
+    margin: 0 30px;
+  }
+}
+
+/*
 @media (min-width: $tablet-width) {
   .live-example__wrapper {
     border-top: 1px solid $border;
@@ -101,3 +174,4 @@
     padding: 0 110px;
   }
 }
+*/

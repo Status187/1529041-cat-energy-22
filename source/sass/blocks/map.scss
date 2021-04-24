@@ -1,31 +1,65 @@
 .map {
   background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    /*&&*/
+  }
 }
 
 .map__invitation {
   padding: 28px 19px;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    min-height: 201px;
+    padding: 60px 71px;
+  }
 }
 
 .map__text {
   width: 50%;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 275px;
+  }
 }
 
 .map__address {
   width: 50%;
 }
 
-.map__text b {
-  @include font-options(16px, 18px, center, uppercase);
-}
-
 .map__address p {
   @include margin-zero();
   @include font-options(14px, 20px, left, none);
   font-family: $font-stack;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:nth-child(1) {
+      margin-bottom: 19px;
+    }
+  }
 }
 
+.map__text b {
+  @include font-options(16px, 18px, center, uppercase);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.map__img {
+  min-height: 400px;
+  width: 100%;
+}
+
+/*
 @media (min-width: $tablet-width) {
   .map {
     background-color: inherit;
@@ -48,3 +82,4 @@
     width: 100%;
   }
 }
+*/

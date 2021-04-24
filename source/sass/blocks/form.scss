@@ -5,10 +5,21 @@
   text-transform: uppercase;
 }
 
+.form__major {
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
+}
+
 .form__title {
   @include font-options(26px, 26px, left, none);
-  padding: 0 20px;
   margin: 0;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    @include title-medium();
+    margin-bottom: 2em;
+  }
 }
 
 .form__field--area {
@@ -19,21 +30,41 @@
   display: flex;
   align-items: center;
   margin-bottom: 13px;
-  padding: 0 20px;
 }
 
 .form__label {
   white-space: nowrap;
   margin-right: 13px;
+  color: $dark;
+
+  @media (min-width: $tablet-width) {
+    @include paragraph-style();
+  }
 }
 
 .form__input {
+  font-size: 16px;
+  line-height: 18px;
   height: 46px;
   width: 100%;
+  padding-left: 14px;
+  color: $black;
   font-family: inherit;
   text-transform: uppercase;
   cursor: pointer;
   border: 2px solid $pale-grey-line;
+
+  &::placeholder {
+    color: $dark-grey;
+  }
+
+  &--border-color {
+    border: 2px solid $light-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include paragraph-style();
+  }
 }
 
 .form li {
@@ -43,12 +74,48 @@
 .form__textarea {
   height: 150px;
   width: 100%;
+
+  &::placeholder {
+    @include font-options(16px, 18pxs, left, uppercase);
+    padding: 0 10px;
+    color: $dark-grey;
+
+    @media (min-width: $tablet-width) {
+      @include paragraph-style();
+      padding: 0 19px;
+    }
+  }
+}
+
+.form__field {
+  min-height: 157px;
+  padding: 0 20px;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    @include padding-zero();
+    @include margin(0, 0, 72px, 0);
+  }
+}
+
+.form__item {
+  margin: 20px 0;
+}
+
+.form__name {
+  @media (min-width: $tablet-width) {
+    @include paragraph-style();
+  }
 }
 
 .form__field--border {
   border-bottom: 1px solid $light-grey-line;
   border-top: 1px solid $light-grey-line;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $light-grey-line;
+  }
 }
 
 .form__controls {
@@ -58,4 +125,23 @@
 .form__button {
   @include button();
   @include font-options(16px, 20px, center, uppercase);
+
+  @media (min-width: $tablet-width) {
+    @include paragraph-style();
+  }
+}
+
+.form__remind {
+  font-family: "arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
+  padding-left: 20%;// не выстраивается по центру :( text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    padding: 20px;
+  }
 }

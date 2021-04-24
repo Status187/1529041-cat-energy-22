@@ -1,11 +1,35 @@
+.choice {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    margin: 0 60px;
+  }
+}
+
 .choice__weight {
-  @include margin(0, 20px, 0, 20px);
+  @include margin(0, 20px, 20px, 20px);
   @include padding(30px, 0, 29px, 0);
   background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    @include margin(0, 30px, 30px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 46%;
+    height: auto;
+    margin: 0 40px;
+  }
 }
 
 .choice__title {
   @include font-options(24px, 37px, center, uppercase);
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: left;
+    margin-left: 53px;
+  }
 }
 
 .choice__text {
@@ -14,19 +38,32 @@
   font-family: $font-stack;
   border-bottom: 1px solid $light-grey-line;
   margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+    margin-left: 52px;
+    text-align: left;
+  }
 }
 
 .choice__bottom {
   @include padding(15px, 0, 18px, 0);
   color: $black;
   margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    @include paragraph-style;
+    margin-left: 52px;
+  }
 }
 
 .choice__transition {
   @include font-options(16px, 16px, left, uppercase);
   color: $black;
 }
-
+/*
 @media (min-width: $tablet-width) {
   .choice__weight {
     margin: 0 30px;
@@ -66,3 +103,4 @@
     margin: 0 40px;
   }
 }
+*/

@@ -1,4 +1,27 @@
+.header {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    padding: 0 30px;
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    padding-top: 69px;
+    justify-content: space-between;
+  }
+}
+
 .header__logo {
+  @include padding(12px, 23px, 16px, 20px);
+  border-bottom: 1px solid $border;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+}
+
+/*.header__logo {
   @include padding(12px, 23px, 16px, 20px);
   border-bottom: 1px solid $border;
 }
@@ -22,3 +45,4 @@
     justify-content: space-between;
   }
 }
+*/

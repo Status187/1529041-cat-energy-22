@@ -59,3 +59,22 @@
   color: $white;
   background-color: $basic-green;
 }
+
+//@include title-large();
+@mixin title-large() {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: left;
+}
+
+//@include paragraph-style();
+@mixin paragraph-style() {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+//@include title-medium();
+@mixin title-medium() {
+  font-size: 36px;
+  line-height: 36px;
+}
