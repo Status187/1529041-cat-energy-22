@@ -1,29 +1,17 @@
-@media (min-width: 320px) {
-  .page__body {
-    width: 320px;
-    margin-right: auto;
-    margin-left: auto;
-    outline: 2px solid rgba(0, 255, 221, 0.8);
-    outline-offset: -2px;
-  }
-}
+.page__body {
+  min-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  outline: 2px solid rgba(0, 255, 221, 0.8);
+  outline-offset: -2px;
 
-@media (min-width: $tablet-width) {
-  .page__body {
-    width: 768px;
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .page__body {
-    width: 1440px;
+  @media (min-width: $desktop-width) {
+    min-width: 1440px;
   }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 .page__body a {

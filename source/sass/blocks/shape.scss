@@ -1,11 +1,34 @@
+.shape__wrapper {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
+}
+
 .shape__title {
-  @include font-options(36px, 36px, center, none);
-  @include padding(27px, 0, 37px, 0);
-  margin: 0;
+  @include font-options(36px, 36px, left, none);
+  @include margin(27px, 0, 37px, 0);
+
+  @media (min-width: $tablet-width) {
+    @include title-large();
+    @include margin(65px, 0, 54px, 0);
+  }
 }
 
 .shape__description {
-  @include font-options(14px, 18px, center, uppercase);
+  @include font-options(14px, 18px, left, uppercase);
   margin: 0;
   margin-bottom: 39px;
+  width: 265px;
+
+  @media (min-width: $tablet-width) {
+    @include paragraph-style();
+    display: block;
+    width: 370px;
+  }
 }
