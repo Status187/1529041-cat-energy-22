@@ -10,7 +10,9 @@
 
     <header class="header">
       <div class="header__logo">
-        <img class="header__img" src="./img/form/header-mobile.png" width="280" height="38" alt="Логотип компании">
+        <a class="header__link-logo" href="./index.html">
+          <img class="header__img" src="./img/form/header-mobile.png" width="280" height="38" alt="Логотип компании">
+        </a>
       </div>
       <nav class="header__menu menu">
         <ul class="menu__list">
@@ -74,8 +76,8 @@
               </ul>
             </div>
 
-            <div class="form__field form__field--area">
-              <h3 class="form__title form__title--subtitle">Контактные данные (владельца кота)</h3>
+            <div class="form__field flex">
+              <h3 class="form__title pseudo-line">Контактные данные (владельца кота)</h3>
               <div class="form__flex">
                 <div class="form__block">
                   <label for="email" class="form__label">E-mail:*</label>
@@ -90,13 +92,13 @@
               </div>
             </div>
 
-            <div class="form__field form__field--area">
-              <h3 class="form__title form__title--subtitle">Комментарий</h3>
+            <div class="form__field flex">
+              <h3 class="form__title pseudo-line">Комментарий</h3>
               <textarea class="form__textarea" name="tell" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
 
-            <div class="form__field form__field--flex">
-              <h3 class="form__title form__title--subtitle">Дополнительно</h3>
+            <div class="form__field flex">
+              <h3 class="form__title pseudo-line">Дополнительно</h3>
               <ul class="form__products products">
                 <li class="products__item">
                   <label for="sweetener" class="products__label">Сахарозаменитель</label>
@@ -137,7 +139,7 @@
           <p>Санкт-Петербург</p>
         </div>
       </div>
-      <div class="map__image">
+      <div class="map__conteiner">
         <img class="map__img" src="./img/catalog/location.png" width="320" height="362" alt="Расположение на карте"><!--Добавить временно карту-->
       </div>
     </section>

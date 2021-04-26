@@ -1,7 +1,10 @@
 
 .aside {
-  padding: 0 20px;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .aside__wrapper {
@@ -12,6 +15,15 @@
   background-position: center;
   background-size: 100%;
   object-fit: contain;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 289px;
+    width: 245px;
+  }
 }
 
 .aside p {
