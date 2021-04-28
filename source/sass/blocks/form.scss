@@ -53,17 +53,7 @@
   }
 }
 
-.form__field--flex {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-}
-
-.form__field--area {
-  //padding: 0 20px;
-
+.flex {
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
@@ -84,35 +74,6 @@
   margin: 0;
   margin-bottom: 35px;
   background-color: $white;
-  position: relative;
-}
-
-.form__title--subtitle {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100vw;// вылезает за пределы, так и не додумал в чем дело((
-    height: 3px;
-    margin: 15px;
-    background-color: $basic-green;
-    z-index: -1;
-  }
-
-  @media (min-width: $tablet-width) {
-    @include title-medium();
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 100%;
-      width: 100vw;
-      height: 3px;
-      margin-top: 17px;
-      background-color: $basic-green;
-    }
-  }
 }
 
 .form__block {
@@ -165,7 +126,7 @@
   width: 100%;
 
   &::placeholder {
-    @include font-options(16px, 18pxs, left, uppercase);
+    @include font-options(16px, 18px, left, uppercase);
     padding: 0 10px;
     color: $dark-grey;
 
@@ -215,7 +176,7 @@
 .form__remind {
   @include margin(21px, 0, 32px, 0);
   display: block;
-  font-family: "arial", sans-serif;
+  font-family: $font-stack;
   font-style: normal;
   font-weight: normal;
   text-align: center;
