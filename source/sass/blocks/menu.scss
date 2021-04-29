@@ -1,4 +1,8 @@
 .menu {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+  }
+
   @media (min-width: $tablet-width) {
     width: 75%;
   }
@@ -8,11 +12,81 @@
   }
 }
 
+.menu__toggle {
+  position: absolute;
+  top: -64px;
+  right: 0;
+  padding: 0;
+  border: none;
+}
+
+.menu__burger {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $white;
+    cursor: pointer;
+    border: none;
+  }
+
+  /*&:hover,
+  &:active {
+    background-color: $white;
+  }*/
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.menu--closed .menu__burger::before {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: 17px;
+  width: 24px;
+  height: 1.5px;
+  background-color: $black;
+  box-shadow: 0 -8px 0 0 $black, 0 8px 0 0 $black;
+  transition: all 0.3s ease 0s;//для плавности
+}
+
+.menu--active .menu__burger {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 18px;
+    width: 26px;
+    height: 1.5px;
+    background-color: $black;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 18px;
+    width: 26px;
+    height: 1.5px;
+    background-color: $black;
+    transform: rotate(-45deg);
+  }
+}
+
 .menu__list {
   @include margin-zero();
   @include padding-zero();
   display: flex;
   flex-direction: column;
+
+  &--closed {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -23,7 +97,7 @@
 }
 
 .menu__item {
-  @include padding(22px, 0, 24px, 0);
+  @include padding(22px, 0, 23px, 0);
   @include font-options(20px, 20px, center, uppercase);
   @include style-none();
   font-weight: 500;

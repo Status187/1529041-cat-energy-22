@@ -11,11 +11,17 @@
     <header class="header">
       <div class="header__logo">
         <a class="header__link-logo">
-          <img class="header__img" src="./img/index/header-mobile.png" width="280" height="38" alt="Логотип компании">
+          <img class="header__img" src="./img/index/header-mobile.png" width="200" height="38" alt="Логотип компании">
         </a>
+        <!--<button class="header__toggle header__toggle--closed toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>-->
       </div>
-      <nav class="header__menu menu">
-        <ul class="menu__list">
+      <nav class="header__menu menu menu--closed">
+        <button class="menu__toggle" type="button">
+          <span class="menu__burger"></span>
+        </button>
+        <ul class="menu__list menu__list--closed">
           <li class="menu__item">
             <a class="menu__link">Главная</a>
           </li>
@@ -154,6 +160,8 @@
         <div class="footer__developer"></div>
       </footer>
     </main>
+
+    <script src="./js/script.js"></script>
 
   </body>
 </html>
