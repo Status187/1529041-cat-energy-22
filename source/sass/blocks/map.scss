@@ -1,11 +1,12 @@
 .map {
-  background-color: $basic-grey;
+  background-color: $pale-grey;
 }
 
 .map__invitation {
   padding: 28px 19px;
   display: flex;
   justify-content: space-between;
+  background-color: $white;
 
   @media (min-width: $tablet-width) {
     min-height: 201px;

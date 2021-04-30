@@ -26,12 +26,34 @@
 }
 
 .live-example__title {
-  @include font-options(36px, 40px, center, none);
-  @include margin(27px, 0, 33px, 0);
+  @include font-options(36px, 40px, left, none);
+  @include padding(30px, 0, 33px, 0);
+  @include margin-zero();
 
   @media (min-width: $tablet-width) {
     @include margin(43px, 0, 63px, 0);
+    @include padding-zero();
     @include title-large();
+  }
+}
+
+.live-example__text {
+  @include font-options(14px, 18px, left, none);
+  @include margin-zero();
+  margin-bottom: 25px;
+  font-family: $font-stack;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.live-example__flex-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -44,22 +66,10 @@
   }
 }
 
-.live-example__flex-wrapper {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-
-.live-example__text {
-  @include font-options(14px, 18px, left, none);
-  font-family: $font-stack;
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
-  }
+.live-example__example {
+  text-align: center;
+  border-radius: 3px;
+  width: calc(50% - 15px);
 }
 
 .live-example__value {
@@ -68,7 +78,7 @@
   border: 1px solid $light-grey;
   border-radius: 3px;
   padding: 14px 0;
-  width: 124px;
+  min-width: 124px;
 
   @media (min-width: $tablet-width) {
     width: 162px;
@@ -80,7 +90,12 @@
 
 .live-exemple__bottom {
   @include font-options(12px, 12px, center, none);
+  display: inline-block;
+  background-color: $pale-grey;
   font-family: $font-stack;
+  transform: translateY(-8px);
+  padding: 0 10px;
+  margin: 0 20px;
 }
 
 .live-example__nutrition {
@@ -104,7 +119,8 @@
 .live-example__button {
   @include font-options(16px, 20px, center, uppercase);
   border: none;
-  background-color: $basic-grey;
+  padding: 0 20px;
+  background-color: $pale-grey;
 
   @media (min-width: $tablet-width) {
     @include paragraph-style();
@@ -116,62 +132,3 @@
     margin: 0 30px;
   }
 }
-
-/*
-@media (min-width: $tablet-width) {
-  .live-example__wrapper {
-    border-top: 1px solid $border;
-    padding: 0 30px;
-    background-color: $white;
-  }
-
-  .live-example__title {// одинаковые свойства текста как у work__title
-    @include margin(43px, 0, 63px, 0);
-    font-size: 60px;
-    line-height: 60px;
-    text-align: left;
-  }
-
-  .live-example__text {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .live-example__flex-wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .live-example__flex {
-    width: 366px;
-  }
-
-  .live-example__value {
-    width: 162px;
-    padding: 16px 0;
-    font-size: 30px;
-    line-height: 37px;
-  }
-
-  .live-example__nutrition {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .live-example__progress {
-    margin: 0 30px;
-  }
-
-  .live-example__button {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .live-example__wrapper {
-    border-top: none;
-    padding: 0 110px;
-  }
-}
-*/

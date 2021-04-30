@@ -119,18 +119,21 @@
 .menu__link {
   @include text-decoration-none();
   color: $black;
-}
-/*
-.menu__item {
-    @include font-options(18px, 24px, center, uppercase);
-    border-bottom: none;
-    margin-right: 4px;
 
-  @media (min-width: $desktop-width) {
-    .menu__item {
-      font-size: 20px;
-      line-height: 30px;
-      margin-right: 37px;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
-*/
+
+.menu__link--active {
+  pointer-events: none;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $basic-green;
+    padding-bottom: 10px;
+  }
+}
