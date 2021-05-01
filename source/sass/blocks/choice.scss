@@ -3,17 +3,25 @@
     @media (min-width: $tablet-width) {
       padding-right: 260px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 0;
+    }
   }
 
   .choice__weight:nth-of-type(2) > .choice__text {
     @media (min-width: $tablet-width) {
       padding-right: 292px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
-    margin: 0 60px;
+    margin: 0 70px;
   }
 }
 
@@ -45,6 +53,15 @@
       width: 140px;
       height: 192px;
     }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      background-image: url("/img/cat-slim-medium.png");
+      left: 67px;
+      top: 35px;
+      width: 70px;
+      height: 97px;
+    }
   }
 
   &::after {//                          Зеленый круг-фон
@@ -63,10 +80,18 @@
 
     @media (min-width: $tablet-width) {
       position: absolute;
-      width: $width * 4;
-      height: $width * 4;
       right: 63px;
       top: 88px;
+      width: $width * 4;
+      height: $width * 4;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      left: 52px;
+      top: 41px;
+      width: $width * 2;
+      height: $width * 2;
     }
   }
 
@@ -92,6 +117,15 @@
       width: 268px;
       height: 112px;
     }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      background-image: url("/img/cat-pro-medium.png");
+      left: 33px;
+      top: 61px;
+      width: 134px;
+      height: 56px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -116,6 +150,11 @@
     @include title-medium();
     @include margin(47px, 0, 26px, 53px);
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 214px;
+    margin-bottom: 70px;
+  }
 }
 
 .choice__text {
@@ -132,6 +171,10 @@
     margin-left: 52px;
     text-align: left;
   }
+
+  @media (min-width: $desktop-width) {
+    @include padding-zero();
+  }
 }
 
 .choice__bottom {
@@ -142,6 +185,10 @@
   @media (min-width: $tablet-width) {
     @include padding(27px, 10px, 54px, 0);
     margin-left: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
   }
 }
 

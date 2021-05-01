@@ -13,7 +13,11 @@
     padding: 60px 71px;
   }
 }
-
+/*
+.map__wrapper {
+  //                           Когда нибудь тут будет интерективная карта с адаптивом...
+}
+*/
 .map__text {
   width: 50%;
 
@@ -55,28 +59,3 @@
   min-height: 400px;
   width: 100%;
 }
-
-/*
-@media (min-width: $tablet-width) {
-  .map {
-    background-color: inherit;
-  }
-
-  .map__invitation {
-    margin: 0 71px;
-  }
-
-  .map__text {
-    margin-right: 310px;
-  }
-
-  .map__address p {
-    text-align: right;
-  }
-
-  .map__img {
-    min-height: 400px;
-    width: 100%;
-  }
-}
-*/

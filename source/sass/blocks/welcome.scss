@@ -40,6 +40,10 @@
     line-height: 60px;
     order: 1;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 516px;
+  }
 }
 
 .welcome__slogan {
@@ -67,6 +71,11 @@
     flex-direction: column;
     min-height: 700px;
     padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include padding-zero();
+    margin: 0 103px;
   }
 }
 

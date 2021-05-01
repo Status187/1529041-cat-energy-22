@@ -26,35 +26,3 @@
   @include padding(12px, 20px, 12px, 20px);
   display: block;
 }
-/*
-.header__toggle {
-  @media (max-width: $mobile-width-only) {
-    position: relative;
-    display: block;
-    width: 60px;
-    height: 66px;
-    background-color: $white;
-    cursor: pointer;
-    border: none;
-  }
-
-  &:hover,
-  &:active {
-    background-color: $white;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
-.header__toggle::before {
-  content: "";
-  position: absolute;
-  top: 29px;
-  left: 17px;
-  width: 24px;
-  height: 1.5px;
-  background-color: $black;
-  box-shadow: 0 -8px 0 0 $black, 0 8px 0 0 $black;
-}*/

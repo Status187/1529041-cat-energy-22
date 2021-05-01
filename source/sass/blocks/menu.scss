@@ -113,6 +113,10 @@
 
   @media (min-width: $desktop-width) {
     @include paragraph-style();
+
+    &--color {
+      background-color: $basic-green;
+    }
   }
 }
 
@@ -127,6 +131,16 @@
   &:active {
     opacity: 0.3;
   }
+
+  &--alternative-color {
+    border-bottom: 2px solid $white;
+    padding-bottom: 10px;
+    pointer-events: none;
+  }
+}
+
+.menu__link--color {
+  color: $white;
 }
 
 .menu__link--active {
