@@ -156,9 +156,18 @@
 .catalog-item__button--alt-color {
   display: block;
   color: $dark-grey;
-  background-color: #f2f2f2;
+  background-color: $basic-grey;
   text-align: center;
   padding: 10px 94px;
+
+  &:hover {
+    background-color: $pale-grey-lighter;
+  }
+
+  &:active {
+    color: $shadow-black;
+  }
+
 
   @media (min-width: $tablet-width) {
     padding: 10px 70px;

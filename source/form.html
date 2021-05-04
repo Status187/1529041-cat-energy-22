@@ -63,18 +63,18 @@
 
             <div class="form__field form__field--border">
               <h3 class="visually-hidden">Выбор программы питания</h3>
-              <ul class="form__list">
-                <li class="form__item">
-                  <label for="slim" class="form__name">похудение</label>
-                  <input type="radio" class="form__radio" name="radio-item" id="slim" value="slim" checked>
+              <ul class="form__list radio-box">
+                <li class="radio-box__item">
+                  <label for="slim" class="radio-box__label">похудение</label>
+                  <input type="radio" class="radio-box__input" name="radio-item" id="slim" value="slim" checked>
                 </li>
-                <li class="form__item">
-                  <label for="mass" class="form__name">Набор массы</label>
-                  <input type="radio" class="form__radio" name="radio-item" id="mass" value="mass">
+                <li class="radio-box__item">
+                  <label for="mass" class="radio-box__label">Набор массы</label>
+                  <input type="radio" class="radio-box__input" name="radio-item" id="mass" value="mass">
                 </li>
-                <li class="form__item">
-                  <label for="consultation" class="form__name">Не знаю (Нужен ваш совет)</label>
-                  <input type="radio" class="form__radio" name="radio-item" id="consultation" value="consultation">
+                <li class="radio-box__item">
+                  <label for="consultation" class="radio-box__label">Не знаю (Нужен ваш совет)</label>
+                  <input type="radio" class="radio-box__input" name="radio-item" id="consultation" value="consultation">
                 </li>
               </ul>
             </div>
@@ -122,7 +122,7 @@
               </ul>
             </div>
             <div class="form__controls">
-              <button class="form__button button" type="submit">отправить заявку</button>
+              <button class="form__button green" type="submit">отправить заявку</button>
               <span class="form__remind">* — Обязательные поля</span>
             </div>
           </div>
@@ -133,7 +133,7 @@
 
     <section class="map">
       <h2 class="visually-hidden">Адрес</h2>
-      <div class="map__invitation">
+      <div class="map__invitation map__invitation--color">
         <div class="map__text">
           <b>приглашаем к сотрудничеству дилеров!</b>
         </div>
@@ -165,7 +165,7 @@
           </svg>
         </a>
         <a class="footer__link" href="https://www.facebook.com" aria-label="Вейсбук">
-          <svg class="footer__fb"width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="footer__fb" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="footer__svg-color" d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z" fill="#666666"/>
           </svg>
         </a>

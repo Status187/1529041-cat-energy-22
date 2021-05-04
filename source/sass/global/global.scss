@@ -16,3 +16,13 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.green {
+  &:hover {
+    background-color: $basic-green-darken;
+  }
+
+  &:active {
+    color: $shadow-white;
+  }
+}

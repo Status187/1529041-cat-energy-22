@@ -8,6 +8,10 @@
   justify-content: space-between;
   background-color: $white;
 
+  &--color {
+    background-color: $basic-grey;
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 201px;
     padding: 60px 71px;

@@ -144,19 +144,21 @@
 .form__textarea {
   height: 150px;
   width: 100%;
+  outline: none;
+  padding: 6px 13px;
+  border: 1px solid $pale-grey-line;
 
   &::placeholder {
     @include font-options(16px, 18px, left, uppercase);
-    padding: 0 10px;
+    padding: 0;
     color: $dark-grey;
 
     @media (min-width: $tablet-width) {
       @include paragraph-style();
-      padding: 0 19px;
     }
   }
 }
-
+/*
 .form__item {
   margin: 20px 0;
 }
@@ -166,12 +168,17 @@
     @include paragraph-style();
   }
 }
-
+*/
 .form__controls {
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
+    @include padding-zero();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     margin-bottom: 72px;
+    column-gap: 64px;
   }
 
   @media (min-width: $desktop-width) {
@@ -189,7 +196,7 @@
 
   @media (min-width: $desktop-width) {
     width: 568px;
-    margin-right: 81px;
+    margin-right: 4px;
   }
 }
 
@@ -205,8 +212,13 @@
   text-transform: none;
 
   @media (min-width: $tablet-width) {
+    @include padding(18px, 0, 18px, 6px);
     font-size: 16px;
-    padding: 20px;
+    text-align: left;
     margin: 0;
   }
+}
+
+.form__products {
+  padding-left: 0;
 }

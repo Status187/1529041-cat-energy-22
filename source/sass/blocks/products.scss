@@ -3,32 +3,88 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    row-gap: 32px;
+    column-gap: 76px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
-  }
-}
-
-.form__controls {
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    column-gap: 61px;
   }
 }
 
 .products__item {
-  margin-bottom: 13px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $tablet-width) {
+    //padding: 5px 0;
+  }
 }
 
 .products__label {
   font-size: 16px;
   line-height: 18px;
+  padding-left: 48px;
+
+  &:hover::before {
+    border-color: $light-grey-border;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.2s;
+  }
 
   @media (min-width: $tablet-width) {
     @include paragraph-style();
+    @include padding(5px, 0, 5px, 61px);
+  }
+}
+
+.products__input {
+  appearance: none;
+}
+
+.products__label::before {//    рамка чекбокса
+  position: absolute;
+  content: "";
+  top: 1px;
+  left: 1px;
+  width: calc(3 * 10px);// тренируюсь с функцией calc
+  height: calc(3 * 10px);
+  border: 1px solid $light-grey;
+
+  @media (min-width: $tablet-width) {
+    width: calc(2 * 1em);
+    height: calc(2 * 1em);
+  }
+}
+
+.products__input:checked {//    галочка чекбокса
+  position: absolute;
+  background-image: url("/img/check-mark.svg");
+  background-repeat: no-repeat;
+  content: "";
+  top: 6px;
+  left: 3px;
+  width: 18px;
+  height: 14px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 12px;
+    left: 9px;
   }
 }

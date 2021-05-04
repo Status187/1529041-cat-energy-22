@@ -5,6 +5,7 @@ $light-grey: #cdcdcd;
 $light-gray-lighter: #d3d3d3;
 $light-grey-darken: #c4c4c4;
 $light-grey-line: #d9d9d9;
+$light-grey-border: #bababa;
 $pale-grey: #eaeaea;
 $pale-grey-line: #e7e7e7;
 $mercury: #e5e5e5;
@@ -16,7 +17,9 @@ $dark: #222222;
 $status-error: #ff8282;
 $basic-green:#68b738;
 $basic-green-darken:#5eaa2f;
-/*Тени*/
+/*Тени и прозрачность*/
+$shadow-white: rgba(255, 255, 255, 0.3);
+$shadow-black: rgba(68, 68, 68, 0.3);
 $shadow-normal: rgba(0, 0, 0, 0.16);
 $shadow-hover: rgba(0, 0, 0, 0.19);
 $shadow-pressed: rgba(0, 0, 0, 0.2);
