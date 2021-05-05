@@ -53,7 +53,7 @@
   }
 }
 
-.flex {
+.flex__field--flex {
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
@@ -74,6 +74,26 @@
   margin: 0;
   margin-bottom: 35px;
   background-color: $white;
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  padding-right: 20px;
+
+  &::before {//                                               Зеленая линия, требует доработки!
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    width: 93vw;
+    height: 2px;
+    background-color: $basic-green;
+    z-index: -1;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include title-medium();
+  }
 }
 
 .form__block {

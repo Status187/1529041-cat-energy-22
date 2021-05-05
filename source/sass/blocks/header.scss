@@ -13,7 +13,8 @@
 }
 
 .header__logo {
-  @include padding(12px, 23px, 16px, 20px);
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid $border;
 
   @media (min-width: $tablet-width) {
@@ -21,28 +22,7 @@
   }
 }
 
-/*.header__logo {
-  @include padding(12px, 23px, 16px, 20px);
-  border-bottom: 1px solid $border;
+.header__link-logo {
+  @include padding(12px, 20px, 12px, 20px);
+  display: block;
 }
-
-@media (min-width: $tablet-width) {
-  .header {
-    display: flex;
-    padding: 0 30px;
-    margin-bottom: 62px;
-  }
-
-  .header__logo {
-    border-bottom: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .header {
-    padding: 0 110px;
-    padding-top: 69px;
-    justify-content: space-between;
-  }
-}
-*/

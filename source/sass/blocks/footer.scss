@@ -1,3 +1,117 @@
 .footer {
   @include margin(0, 20px, 0, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include margin-zero();
+    display: flex;
+    align-items: center;
+    background-color: $basic-grey;
+    padding: 20px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 110px;
+  }
+}
+
+.footer__wrapper {
+  padding-bottom: 32px;
+
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid $light-grey-line;
+  }
+}
+
+.footer__energy {
+  @include margin(39px, auto, 0, auto);
+  display: block;
+  background-image: url("/img/footer-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 40px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 32px;
+  }
+}
+
+.footer__svg-color {
+  &:hover {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__social-network {
+  @include padding(20px, 0, 21px, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
+  margin: 0 auto;
+}
+
+.footer__developer {
+  .footer__link {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0;
+    color: $black;
+
+    @media (max-width: $mobile-width-only) {
+      border-top: 1px solid $light-grey-line;
+    }
+  }
+}
+
+.footer__academy {
+  @include font-options(16px, 18px, center, none);
+  display: block;
+  font-family: $font-stack;
+  margin: auto 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__logo {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {// Один медиа запрос н все SVG
+  .footer__vk {
+    width: 30px;
+    height: 22px;
+  }
+
+  .footer__insta {
+    width: 23px;
+    height: 23px;
+  }
+
+  .footer__fb {
+    width: 28px;
+    height: 33px;
+  }
+
+  .footer__htmla {
+    margin-left: 22px;
+  }
 }

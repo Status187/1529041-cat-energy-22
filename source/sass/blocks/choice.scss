@@ -1,14 +1,132 @@
 .choice {
+  .choice__weight:nth-of-type(1) > .choice__text {
+    @media (min-width: $tablet-width) {
+      padding-right: 260px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 0;
+    }
+  }
+
+  .choice__weight:nth-of-type(2) > .choice__text {
+    @media (min-width: $tablet-width) {
+      padding-right: 292px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 0;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
-    margin: 0 60px;
+    margin: 0 70px;
   }
 }
 
 .choice__weight {
   @include margin(0, 20px, 20px, 20px);
-  @include padding(30px, 0, 29px, 0);
+  @include padding(30px, 0, 0, 0);
   background-color: $basic-grey;
+  position: relative;
+
+  &:nth-of-type(1)::before {//          Первый кот, сидит
+    content: "";
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      background-image: url("/img/cat-slim.png");
+      left: 28px;
+      top: 42px;
+      width: 37px;
+      height: 50px;
+    }
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      background-image: url("/img/cat-slim-large.png");
+      right: 93px;
+      top: 75px;
+      width: 140px;
+      height: 192px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      background-image: url("/img/cat-slim-medium.png");
+      left: 67px;
+      top: 35px;
+      width: 70px;
+      height: 97px;
+    }
+  }
+
+  &::after {//                          Зеленый круг-фон
+    content: "";
+    background-color: #68b738;
+    border-radius: 50%;
+    z-index: 1;
+
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      left: 20px;
+      top: 45px;
+      width: $width;
+      height: $width;
+    }
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      right: 63px;
+      top: 88px;
+      width: $width * 4;
+      height: $width * 4;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      left: 52px;
+      top: 41px;
+      width: $width * 2;
+      height: $width * 2;
+    }
+  }
+
+  &:nth-of-type(2)::before {//          Второй кот, идет
+    content: "";
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      background-image: url("/img/cat-pro.png");
+      left: 11px;
+      top: 59px;
+      width: 67px;
+      height: 28px;
+    }
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      background-image: url("/img/cat-pro-large.png");
+      right: 30px;
+      top: 133px;
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      background-image: url("/img/cat-pro-medium.png");
+      left: 33px;
+      top: 61px;
+      width: 134px;
+      height: 56px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     @include margin(0, 30px, 30px, 30px);
@@ -22,13 +140,20 @@
 }
 
 .choice__title {
-  @include font-options(24px, 37px, center, uppercase);
+  @include font-options(24px, 37px, left, uppercase);
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 90px;
+  }
 
   @media (min-width: $tablet-width) {
-    font-size: 36px;
-    line-height: 36px;
-    text-align: left;
-    margin-left: 53px;
+    @include title-medium();
+    @include margin(47px, 0, 26px, 53px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 214px;
+    margin-bottom: 70px;
   }
 }
 
@@ -46,6 +171,10 @@
     margin-left: 52px;
     text-align: left;
   }
+
+  @media (min-width: $desktop-width) {
+    @include padding-zero();
+  }
 }
 
 .choice__bottom {
@@ -54,53 +183,50 @@
   margin: 0 20px;
 
   @media (min-width: $tablet-width) {
-    @include paragraph-style;
+    @include padding(27px, 10px, 54px, 0);
     margin-left: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
   }
 }
 
 .choice__transition {
   @include font-options(16px, 16px, left, uppercase);
   color: $black;
-}
-/*
-@media (min-width: $tablet-width) {
-  .choice__weight {
-    margin: 0 30px;
+  position: relative;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 100px;
+    content: "";
+    background-image: url("/img/arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 12px;
+    object-fit: contain;
+
+    @media (min-width: $tablet-width) {
+      top: 9px;
+      left: 132px;
+    }
   }
 
-  .choice__title {
-    font-size: 36px;
-    line-height: 36px;
-    text-align: left;
-    margin-left: 53px;
+  &:active {
+    transition: all 0.1s ease;
+    opacity: 0.3;
   }
 
-  .choice__text {
-    font-size: 16px;
-    line-height: 24px;
-    border-bottom: none;
-    margin-left: 52px;
-    text-align: left;
+  &:hover::before {
+    width: 32px;
+    transition: all 0.3s ease;
   }
 
-  .choice__bottom {
-    font-size: 20px;
-    line-height: 30px;
-    margin-left: 52px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .choice {
-    display: flex;
-    margin: 0 60px;
-  }
-
-  .choice__weight {
-    width: 46%;
-    height: auto;
-    margin: 0 40px;
+  @media (min-width: $tablet-width) {
+    @include paragraph-style;
   }
 }
-*/
