@@ -25,7 +25,7 @@
 .footer__energy {
   @include margin(39px, auto, 0, auto);
   display: block;
-  background-image: url("/img/footer-logo.png");
+  background-image: url("../img/footer-logo.png");
   background-repeat: no-repeat;
   background-position: center;
   width: 130px;
@@ -80,10 +80,11 @@
   @include font-options(16px, 18px, center, none);
   display: block;
   font-family: $font-stack;
+  color: $dark-grey;
   margin: auto 0;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   &:active {
@@ -93,6 +94,64 @@
 
 .footer__logo {
   display: block;
+}
+
+
+.footer__vk {
+  width: 23px;
+  height: 16px;
+  fill: $dark-grey-lighter;
+
+  &:hover {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__insta {
+  width: 16px;
+  height: 16px;
+  fill: $dark-grey-lighter;
+
+  &:hover {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__fb {
+  width: 22px;
+  height: 22px;
+  fill: $white;
+  stroke: $dark-grey-lighter;
+
+  &:hover {
+    stroke: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__htmla {
+  width: 27px;
+  height: 34px;
+  fill: $dark-grey-lighter;
+
+  &:hover {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {// Один медиа запрос н все SVG

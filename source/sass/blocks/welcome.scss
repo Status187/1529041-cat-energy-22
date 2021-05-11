@@ -1,11 +1,16 @@
 .welcome {
   display: block;
-  background-image: url("/img/index-background.png");
+  background-image: url("../img/index-background.jpeg");
   background-repeat: no-repeat;
   background-position: top;
+  background-size: 320px 302px;
   object-fit: contain;
   position: relative;
   z-index: 1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background@2x.jpeg");
+  }
 
   &::before {
     @media (max-width: $mobile-width-only) {
@@ -22,6 +27,29 @@
   @media (min-width: $tablet-width) {
     background-image: none;
     background-color: inherit;
+    height: 806px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 594px;
+  }
+}
+
+
+.welcome__container {
+  @include padding(27px, 20px, 0, 20px);
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include padding-zero();
+    margin: 0 103px;
   }
 }
 
@@ -62,23 +90,6 @@
   }
 }
 
-.welcome__container {
-  @include padding(27px, 20px, 0, 20px);
-  margin: 0;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-    min-height: 700px;
-    padding: 0 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include padding-zero();
-    margin: 0 103px;
-  }
-}
-
 .welcome__link {
   @include font-options(14px, 18px, center, uppercase);
   @include button();
@@ -92,16 +103,44 @@
 }
 
 .welcome__wrapper {
-  display: block;
-  background-image: url("/img/can-of-food.png");
+  background-image: url("../img/can-of-food.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 270px;
   object-fit: contain;
   min-height: 270px;
+  max-width: 709px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/can-of-food@2x.png");
+  }
 
   @media (min-width: $tablet-width) {
+    position: relative;
+    top: -103px;
+    left: 0;
+    background-image: url("../img/index-can-tablet.png");
+    background-size: 709px 609px;
+    background-position: left;
+    min-height: 609px;
     order: 4;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-can-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/can-of-food-desktop.png");
+    background-size: 552px 499px;
+    position: relative;
+    top: -400px;
+    left: 455px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/can-of-food-desktop@2x.png");
+    }
   }
 }
 

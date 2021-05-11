@@ -38,7 +38,7 @@
 
     @media (max-width: $mobile-width-only) {
       position: absolute;
-      background-image: url("/img/cat-slim.png");
+      background-image: url("../img/cat-slim.png");
       left: 28px;
       top: 42px;
       width: 37px;
@@ -47,7 +47,7 @@
 
     @media (min-width: $tablet-width) {
       position: absolute;
-      background-image: url("/img/cat-slim-large.png");
+      background-image: url("../img/cat-slim-large.png");
       right: 93px;
       top: 75px;
       width: 140px;
@@ -56,7 +56,7 @@
 
     @media (min-width: $desktop-width) {
       position: absolute;
-      background-image: url("/img/cat-slim-medium.png");
+      background-image: url("../img/cat-slim-medium.png");
       left: 67px;
       top: 35px;
       width: 70px;
@@ -102,7 +102,7 @@
 
     @media (max-width: $mobile-width-only) {
       position: absolute;
-      background-image: url("/img/cat-pro.png");
+      background-image: url("../img/cat-pro.png");
       left: 11px;
       top: 59px;
       width: 67px;
@@ -111,7 +111,7 @@
 
     @media (min-width: $tablet-width) {
       position: absolute;
-      background-image: url("/img/cat-pro-large.png");
+      background-image: url("../img/cat-pro-large.png");
       right: 30px;
       top: 133px;
       width: 268px;
@@ -120,7 +120,7 @@
 
     @media (min-width: $desktop-width) {
       position: absolute;
-      background-image: url("/img/cat-pro-medium.png");
+      background-image: url("../img/cat-pro-medium.png");
       left: 33px;
       top: 61px;
       width: 134px;
@@ -203,7 +203,7 @@
     top: 6px;
     left: 100px;
     content: "";
-    background-image: url("/img/arrow.png");
+    background-image: url("../img/arrow.png");
     background-repeat: no-repeat;
     background-position: center;
     width: 24px;

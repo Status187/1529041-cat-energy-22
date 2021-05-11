@@ -93,6 +93,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-left: 95px;
   }
 }
 
@@ -105,6 +106,7 @@
   border-bottom: 1px solid $border;
 
   @media (min-width: $tablet-width) {
+    @include padding(18px, 0, 5px, 0);
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -115,7 +117,7 @@
     @include paragraph-style();
 
     &--color {
-      background-color: $basic-green;
+      background-color: transparent;
     }
   }
 }
