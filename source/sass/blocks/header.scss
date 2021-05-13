@@ -2,12 +2,13 @@
   @media (min-width: $tablet-width) {
     display: flex;
     padding: 0 30px;
+    padding-top: 24px;
     margin-bottom: 62px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 110px;
-    padding-top: 69px;
+    padding-top: 47px;
     justify-content: space-between;
   }
 }
@@ -24,5 +25,30 @@
 
 .header__link-logo {
   @include padding(12px, 20px, 12px, 20px);
-  display: block;
+  display: flex;
+  width: calc(100% - 38px);
+
+  picture {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.header__lable {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__img {
+  @media (max-width: $mobile-width-only) {
+    height: 18px;
+    width: 102px;
+  }
 }

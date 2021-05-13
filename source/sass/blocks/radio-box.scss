@@ -1,0 +1,71 @@
+.radio-box {
+  padding-left: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 30px 0;
+  }
+}
+
+.radio-box__item {
+  position: relative;
+  margin: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 23px 0;
+  }
+}
+
+.radio-box__label {
+  color: $dark;
+  padding-left: 46px;
+
+  &::before {//      контур радио кнопки
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $light-grey;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: -6px;
+      left: 28px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    @include paragraph-style();
+    padding-left: 87px;
+  }
+}
+
+.radio-box__label:hover::before {
+  border-color: $light-grey-border;
+}
+
+.radio-box__input {
+  appearance: none;
+
+  &:checked::after {
+    content: "";
+    position: absolute;
+    top: 8.5px;
+    left: 8.5px;
+    width: 13.5px;
+    height: 13.5px;
+    background-color: $basic-green;
+    border-radius: 50%;
+    z-index: 2;
+
+    @media (min-width: $tablet-width) {
+      top: 5px;
+      left: 39px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
