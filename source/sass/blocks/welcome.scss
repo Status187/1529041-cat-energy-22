@@ -135,7 +135,9 @@
     background-image: url("../img/can-of-food-desktop.png");
     background-size: 552px 499px;
     position: relative;
-    top: -400px;
+    min-height: 499px;
+    width: 552px;
+    top: -383px;
     left: 455px;
 
     @media (min-resolution: 2dppx) {
